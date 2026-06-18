@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>To Do List</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="app" role="main">
+
+  <!-- Header -->
+  <header class="header">
+    <h1>To Do</h1>
+    <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">🌙</button>
+  </header>
+
+  <!-- Card -->
+  <div class="card">
+
+    <!-- Add Task Form -->
+    <div class="add-task" id="addForm">
+      <div class="add-task-row">
+        <input type="text" id="taskInput" placeholder="Add a new task..." maxlength="200" autofocus>
+        <button class="btn-add" id="addBtn">Add</button>
+      </div>
+      <div class="add-options">
+        <input type="date" id="dueDateInput" aria-label="Due date">
+        <select id="priorityInput" aria-label="Priority">
+          <option value="low">Low</option>
+          <option value="medium" selected>Medium</option>
+          <option value="high">High</option>
+        </select>
+        <select id="categoryInput" aria-label="Category">
+          <option value="">No category</option>
+          <option value="work">Work</option>
+          <option value="personal">Personal</option>
+          <option value="urgent">Urgent</option>
+        </select>
+        <select id="recurringInput" aria-label="Recurring">
+          <option value="none">None</option>
+          <option value="daily">Daily</option>
+          <option value="weekly">Weekly</option>
+        </select>
+      </div>
+    </div>
+
+    <!-- Toolbar -->
+    <div class="toolbar">
+      <input type="search" class="search-input" id="searchInput" placeholder="Search tasks..." aria-label="Search tasks">
+      <div class="filter-group" id="filterGroup">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="work">Work</button>
+        <button class="filter-btn" data-filter="personal">Personal</button>
+        <button class="filter-btn" data-filter="urgent">Urgent</button>
+      </div>
+    </div>
+
+    <!-- Progress -->
+    <div class="progress-section" id="progressSection">
+      <div class="progress-bar-wrap">
+        <div class="progress-bar-bg">
+          <div class="progress-bar-fill" id="progressFill"></div>
+        </div>
+      </div>
+      <div class="progress-stats">
+        <span id="progressText">0 / 0</span>
+        <span id="todayText">0 done today</span>
+      </div>
+    </div>
+
+    <!-- Task List -->
+    <ul class="task-list" id="taskList"></ul>
+
+    <!-- Empty State -->
+    <div class="empty-state hidden" id="emptyState">
+      <div class="empty-illustration">
+        <span class="empty-icon" id="emptyIcon">📋</span>
+        <div class="empty-checklist">
+          <span class="empty-line"></span>
+          <span class="empty-line"></span>
+          <span class="empty-line"></span>
+        </div>
+      </div>
+      <p class="empty-title" id="emptyTitle">No tasks yet</p>
+      <p class="empty-subtitle" id="emptySubtitle">Add a task to get started</p>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+      <span class="task-count" id="taskCount">0 items left</span>
+      <button class="clear-btn" id="clearCompleted">Clear completed</button>
+    </div>
+  </div>
+</div>
+
+<!-- Toast -->
+<div class="toast" id="toast">
+  <span id="toastMsg">Task deleted</span>
+  <button class="toast-undo" id="toastUndo">Undo</button>
+</div>
+
+<!-- Confetti Canvas -->
+<canvas id="confettiCanvas"></canvas>
+
+<script src="script.js"></script>
+</body>
+</html>
