@@ -21,4 +21,4 @@ jobs:
         env:
           HF_TOKEN: ${{ secrets.HF_TOKEN }}
         run: |
-          git push --force https://VaishnaviKadwad:$HF_TOKEN@huggingface.co/spaces/VaishnaviKadwad/to-do-list-app main:main
+          git push --force https://VaishnaviKadwad:$HF_TOKEN@huggingface.co/spaces/VaishnaviKadwad/to-do-list-app main:refs/heads/main
