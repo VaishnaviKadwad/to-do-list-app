@@ -1,17 +1,25 @@
+---
+title: To Do List App
+emoji: 📝
+colorFrom: blue
+colorTo: indigo
+sdk: streamlit
+app_file: app.py
+pinned: false
+---
+
 # 📝 To-Do List App
 
 An intuitive, interactive web application to manage your daily tasks efficiently, built using Python and Streamlit.
 
-[![Deploy to Hugging Face Spaces](https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Spaces-blue)]( https://huggingface.co/spaces/VaishnaviKadwad/to-do-list-app
-)
+[![Deploy to Hugging Face Spaces](https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Spaces-blue)](https://huggingface.co/spaces/VaishnaviKadwad/to-do-list-app)
 
 ---
 
 ## 🚀 Live Demo
 
 You can access the fully deployed, interactive application directly in your browser:
-👉 **[Open the To-Do List App]( https://huggingface.co/spaces/VaishnaviKadwad/to-do-list-app
-)**
+👉 **[Open the To-Do List App](https://huggingface.co/spaces/VaishnaviKadwad/to-do-list-app)**
 
 ---
 
@@ -38,6 +46,6 @@ Based on the repository configuration, this project contains:
 If you want to run this project locally on your machine, follow these steps:
 
 1. **Clone the repository:**
-   ```bash
-   git clone [https://github.com/VaishnaviKadam2/to-do-list-app.git](https://github.com/VaishnaviKadwad/to-do-list-app.git)
+```bash
+   git clone [https://github.com/VaishnaviKadwad/to-do-list-app.git](https://github.com/VaishnaviKadwad/to-do-list-app.git)
    cd to-do-list-app
